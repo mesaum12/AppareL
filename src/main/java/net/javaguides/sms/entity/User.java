@@ -21,10 +21,6 @@ public class User {
      
     @Column(name="role")
     private String role;
-    
-//    @OneToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY,mappedBy="user")
-//    private List<Apparel> apparelsPurchased=new ArrayList();
-//    
 
     public String getRole() {
 		return role;

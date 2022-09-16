@@ -1,6 +1,8 @@
 package net.javaguides.sms.config;
 
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.security.core.GrantedAuthority;
@@ -23,9 +25,11 @@ public class CustomUserDetails implements UserDetails {
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		
 		SimpleGrantedAuthority simpleGrantedAuthority=new SimpleGrantedAuthority(user.getRole());
-		return List.of(simpleGrantedAuthority);
-		
+    	return Arrays.asList(simpleGrantedAuthority);
+//    	return List.of(simpleGrantedAuthority);
+
 	}
+		
 
 	@Override
 	public String getPassword() {
