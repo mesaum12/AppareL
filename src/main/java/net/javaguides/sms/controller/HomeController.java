@@ -42,8 +42,8 @@ public class HomeController {
 	public String registerUser(@ModelAttribute("user") User user,Model model)
 	{
 //		user.setEnabled(true);
-//		user.setRole("ROLE_USER");
-		user.setRole("ROLE_ADMIN");
+		user.setRole("ROLE_USER");
+//		user.setRole("ROLE_ADMIN");
 		user.setPassword(passwordEncoder.encode(user.getPassword()));
 		userService.saveUser(user);
 		return "signup";
